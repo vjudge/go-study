@@ -12,6 +12,7 @@ func main () {
   slice3 := []int{1, 2, 3}
   fmt.Println("slice3 = ", slice3)
    // make()
+   // var slice []type = make([]type, len, cap) // 省略 cap，相当于 cap = len
    var slice4 []int = make([]int, 0)
    fmt.Println("slice4 = ", slice4)
    // 数组
@@ -31,4 +32,11 @@ func main () {
    fmt.Println("slice9 = ", `[:]`, slice9)
    slice10 := array2[:len(array2)-1] //去掉切片的最后一个元素
    fmt.Println("slice10 = ", `:len(array2)-1`, slice10)
+   // append()
+   slice11 := append(slice5, 888)
+   fmt.Println("slice11 = ", slice11)
+   // 遍历
+   for i, v := range slice6 {
+        fmt.Printf("遍历: i = %v , v = %v\n", i, v)
+    }
 }
