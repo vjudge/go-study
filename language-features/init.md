@@ -52,8 +52,7 @@ func main() {
 ```
 
 对于不同的package，如果不相互依赖的话，按照main包中”先import的后调用”的顺序调用其包中的init()，如果package存在依赖，则先调用最早被依赖的package中的init()，最后调用main函数。
-
-
+![包引用关系](https://github.com/vjudge/go-study/blob/master/images/package-relation.png)
 
 
 
