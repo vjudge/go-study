@@ -5,7 +5,6 @@ func main () {
   fmt.Println("Hello world!")
 }
 
-
 // go run hello-world.go
 
 // go build hello-world.go
