@@ -6,6 +6,7 @@ func init () {
   fmt.Println("--- init1 ---")
 }
 
-func initMain () {
+func GetName () string {
+  return "init1"
 }
 

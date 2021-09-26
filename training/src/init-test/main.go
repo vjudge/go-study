@@ -2,8 +2,6 @@ package main
 
 import (
   "fmt"
-  "init-test/module/init2"
-  "module/init1"
 )
 
 
