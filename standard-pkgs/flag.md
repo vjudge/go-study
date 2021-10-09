@@ -9,6 +9,7 @@ import "flag"
 ```
 
 
+
 ### flag.StringVar()
 ```go
 flag.StringVar(&name, "name", "everyone", "The greeting object.")
@@ -19,11 +20,46 @@ flag.StringVar(&name, "name", "everyone", "The greeting object.")
 ```
 
 
+
 ### flag.String()
 返回一个已经分配好用于存储命令参数值的地址
 ```go
-var name = flag.String("name", "everyone", "The greeting object.")
+name := flag.String("name", "everyone", "The greeting object.")
 ```
+
+
+
+### flag.BoolVar()
+```go
+flag.BoolVar(&h, "h", false, "this help")
+```
+
+
+### flag.Bool()
+```go
+h := flag.BoolVar("h", false, "this help")
+```
+
+
+
+### flag.IntVar()
+```go
+flag.BoolVar(&num, "num", 123, "this help")
+```
+
+
+### flag.Int()
+```go
+num := flag.BoolVar("num", 123, "this help")
+```
+
+
+
+### flag.Var()
+```go
+flag.Var(&flagVal, "name", "help message")
+```
+
 
 
 ### flag.Parse()
@@ -31,8 +67,20 @@ var name = flag.String("name", "everyone", "The greeting object.")
 该函数的调用，必须在所有命令参数存储载体的声明，和设置之后，并在读取任何命令参数值之前。
 
 
+
 ### flag.Usage = func () { ... }
 自定义命令源码文件的参数使用说明
+```go
+func usage () {
+    fmt.Fprintf(os.Stderr, `nginx version: nginx/1.10.0
+Usage: nginx [-hvVtTq] [-s signal] [-c filename] [-p prefix] [-g directives]
+
+Options:
+`)
+    flag.PrintDefaults()
+}
+```
+
 
 
 ### flag.CommandLine
