@@ -40,6 +40,7 @@ func myFunc(param1 string, param2 string) (result string) {
 
 
 ### 返回值
+Go语言的函数可以一次返回多个结果。  
 没有参数的 return 语句返回各个返回变量的当前值。这种用法被称作“裸”返回。
 ```
 func add(a, b int) (c int) {
