@@ -27,22 +27,22 @@ type slice struct {
 // 切片类型属于引用类型。它的零值即为nil，即空值。如果我们只声明一个切片类型的变量而不为它赋值，那么该变量的值将会是nil。
 var slice []int // nil
 var slice []string
-// 赋值
-var slice = []int{1, 2, 3}
 ```
 
 
-### make([]type, len, cap)
+### 初始化：make([]type, len, cap)
 len 是长度，cap 是容量。省略 cap 时，cap = len。
 ```go
 slice = make([]int, len, cap)
+// 赋值
+var slice = []int{1, 2, 3}
 ```
 
 
 ### 切片表达式
 切片表达式的求值结果相当于以元素下界索引和元素上界索引作为依据从被操作对象上“切下”而形成的新值.被“切下”的部分不包含元素上界索引指向的元素。
 ```go
-arr2 := [...]int{9, 8, 7, 6, 5, 4, 3, 2, 1, 0}
+arr2 := [...]int{9, 8, 7, 6, 5, 4, 3, 2, 1, 0} // 数组
 slice5 := arr[start:end]
 slice6 := arr[:end]        
 slice7 := arr[start:]     
